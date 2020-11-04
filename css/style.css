@@ -31,7 +31,11 @@
     text-align: center;
     font-size:1.2rem;
 }
+.prev{
+    color:#aaa;
+}
 .day span{
+    border:1px solid #ddd;
     display:inline-block;
     width:71.14px;
     height:42px;
