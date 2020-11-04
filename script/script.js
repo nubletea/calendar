@@ -1,14 +1,31 @@
    const DAY=document.querySelector('.day');
    const YEAR=document.querySelector('.year');
    const MONTH=document.querySelector('.month_change');
+   const today=new Date();
    const day_count={
        count:1,
        arr:[],
        text:''
    }
-    let today=new Date();
+   window.addEventListener("DOMContentLoaded", (e) => {
+    document.querySelector(".month").addEventListener("click", (e) => {
+      switch (e.target.innerText) {
+        case "keyboard_arrow_left":
+          arrow(-1);
+          break;
+        case "keyboard_arrow_right":
+          arrow(1);
+          break;
+        default:
+          new Error("error");
+          break;
+      }
+    });
+    date();
+});
+
     // day //
-    function for1(){
+    function date(){
         let this_day=new Date(today.getFullYear(),today.getMonth()+day_count.count-1,1);
         let this_month=new Date(today.getFullYear(),today.getMonth()+day_count.count,0);
         day_count.text="";
@@ -32,7 +49,7 @@
     MONTH.innerHTML=this_month.getMonth()+1;
     YEAR.innerHTML=this_month.getFullYear()+"년";
     }
-    function dov(value){
+    function arrow(value){
         day_count.count=day_count.count+value;
-        for1();
+        date();
     }
