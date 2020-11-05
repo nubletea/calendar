@@ -46,6 +46,7 @@
 .day span.active{
     background:skyblue;
     font-weight:700;
+    color:#000;
 }
 .day span.sat{
     color:skyblue;
