@@ -43,3 +43,13 @@
     text-align: center;
     font-size:1.2rem;
 }
+.day span.active{
+    background:skyblue;
+    font-weight:700;
+}
+.day span.sat{
+    color:skyblue;
+}
+.day span.sun{
+    color:red;
+}
